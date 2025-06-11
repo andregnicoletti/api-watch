@@ -1,0 +1,25 @@
+spring:
+  # H2 Connection
+  datasource:
+    url: jdbc:h2:mem:test_db
+    username: sa
+    password:
+
+  # H2 Client
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # JPA Config
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Disable Flyway
+  flyway:
+    enabled: false

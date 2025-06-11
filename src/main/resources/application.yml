@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: api-watch
+
+  profiles:
+    active: ${PROFILE:dev}
+
+  jpa:
+    open-in-view: false
+
+  logging:
+    level:
+      root: ${LOG_LEVEL:INFO}

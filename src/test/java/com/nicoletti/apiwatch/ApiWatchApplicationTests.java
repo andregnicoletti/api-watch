@@ -1,4 +1,4 @@
-package com.nicoletti.api_watch;
+package com.nicoletti.apiwatch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
