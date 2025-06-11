@@ -16,12 +16,12 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
-    String email;
-    String password;
+    private Long id;
+    private String name;
+    private String email;
+    private String password;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-    Set<ApiEndpointEntity> endpoints;
+    private Set<ApiEndpointEntity> endpoints;
 
 }

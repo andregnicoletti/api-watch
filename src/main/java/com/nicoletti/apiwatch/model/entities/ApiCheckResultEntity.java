@@ -16,11 +16,11 @@ public class ApiCheckResultEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    Long endpointId;
-    Integer statusCode;
-    Long responseTimeMs;
-    String errorMessage;
-    LocalDateTime checkTime;
+    private Long id;
+    private  Long endpointId;
+    private Integer statusCode;
+    private  Long responseTimeMs;
+    private String errorMessage;
+    private LocalDateTime checkTime;
 
 }

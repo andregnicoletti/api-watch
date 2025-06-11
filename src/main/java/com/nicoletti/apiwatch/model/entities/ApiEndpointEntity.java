@@ -16,19 +16,18 @@ public class ApiEndpointEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
-    String url;
-    String method;
-    String headersJson;
-    String bodyJson;
-    Integer intervalMinutes;
-    Long userId;
-    Boolean active;
-    LocalDateTime lastCheck;
+    private Long id;
+    private String name;
+    private String url;
+    private String method;
+    private String headersJson;
+    private String bodyJson;
+    private Integer intervalMinutes;
+    private Boolean active;
+    private LocalDateTime lastCheck;
 
     @ManyToOne
-    @JoinColumn(name = "endpoints")
-    UserEntity user;
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 
 }
