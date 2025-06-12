@@ -10,6 +10,8 @@ import com.nicoletti.apiwatch.repositories.ApiEndpointRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class ApiEndpointService {
@@ -33,4 +35,7 @@ public class ApiEndpointService {
         }
     }
 
+    public List<ApiEndpointEntity> findAll() {
+        return this.repository.findAll();
+    }
 }
