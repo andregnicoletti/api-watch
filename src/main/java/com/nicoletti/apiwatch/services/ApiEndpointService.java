@@ -7,6 +7,7 @@ import com.nicoletti.apiwatch.model.entities.ApiEndpointEntity;
 import com.nicoletti.apiwatch.model.entities.UserEntity;
 import com.nicoletti.apiwatch.model.mappers.ApiEndpointMapper;
 import com.nicoletti.apiwatch.repositories.ApiEndpointRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class ApiEndpointService {
     private final UserService userService;
     private final ApiEndpointMapper mapper;
 
-
+    @Transactional
     public ResponseDTO setNewWatch(ApiEndpointNewDTO newDTO) {
         try {
             UserEntity userEntity = userService.getEntityById(newDTO.userId());

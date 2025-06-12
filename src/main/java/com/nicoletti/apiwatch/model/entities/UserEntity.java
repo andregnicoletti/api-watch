@@ -21,6 +21,7 @@ public class UserEntity {
     private String email;
     private String password;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<ApiEndpointEntity> endpoints;
 

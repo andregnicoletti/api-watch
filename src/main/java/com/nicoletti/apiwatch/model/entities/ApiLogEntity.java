@@ -30,6 +30,7 @@ public class ApiLogEntity {
 
     private Long executionTimeMs; // tempo de execução em milissegundos
 
+    @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "endpoint_id")
     private ApiEndpointEntity endpoint;
